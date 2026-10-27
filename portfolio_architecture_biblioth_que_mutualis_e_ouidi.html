@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Architecture | Bibliothèque Scolaire Mutualisée à Ouidi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F9FAFB;
+            color: #1F2937;
+        }
+        .brick-accent {
+            background-color: #B84A39;
+        }
+        .text-brick {
+            color: #B84A39;
+        }
+        .border-brick {
+            border-color: #B84A39;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 brick-accent text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-md">
+                    B
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold leading-none text-slate-900">BELEMSIGRI Ian Claude Kayaba</h1>
+                    <p class="text-xs text-slate-500 font-medium">Portfolio Architecture &bull; Projet de Fin d'Études</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#contexte" class="hover:text-brick transition-colors">Contexte & Diagnostic</a>
+                <a href="#demarche" class="hover:text-brick transition-colors">Démarche Conceptuelle</a>
+                <a href="#coupes" class="hover:text-brick transition-colors">Plans, Coupes & Façades (PDF)</a>
+                <a href="#espaces" class="hover:text-brick transition-colors">Galerie 3D</a>
+            </nav>
+            <div class="text-right text-xs text-slate-400 hidden lg:block">
+                <p><span class="font-semibold text-slate-600">Encadreurs :</span> M. Yves YOBO & M. DA Lamine</p>
+                <p>15 Octobre 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-amber-950 text-white py-24 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                    <span>Ouagadougou, Burkina Faso &bull; Quartier Ouidi</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Conception d'une Bibliothèque Scolaire Mutualisée
+                </h1>
+                <p class="text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
+                    Une réponse architecturale bioclimatique et inclusive face au déficit d'infrastructures de lecture. Un tiers-lieu structuré autour du végétal et adapté aux besoins différenciés du primaire et du secondaire.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 min-w-[140px]">
+                        <span class="block text-3xl font-extrabold text-amber-400">12</span>
+                        <span class="text-xs text-slate-300">Établissements desservis</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 min-w-[140px]">
+                        <span class="block text-3xl font-extrabold text-amber-400">61% / 39%</span>
+                        <span class="text-xs text-slate-300">Répartition Primaire / Secondaire</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10 min-w-[140px]">
+                        <span class="block text-3xl font-extrabold text-amber-400">Bioclimatique</span>
+                        <span class="text-xs text-slate-300">Patios & Végétation intégrée</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group bg-slate-800">
+                    <img src="images/3d-accueil.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'aspect-video sm:aspect-square bg-slate-800 flex items-center justify-center text-slate-400 text-center p-6\'><i data-lucide=\'building-2\' class=\'w-16 h-16 mx-auto mb-4 text-amber-400 opacity-80\'></i><p class=\'font-medium text-white\'>Vue d\'ensemble du projet</p><p class=\'text-xs text-slate-400 mt-1\'>Fichier : images/3d-accueil.png</p></div>';" alt="Vue 3D Principale" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 1: CONTEXTE ET DIAGNOSTIC -->
+    <section id="contexte" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-bold text-brick uppercase tracking-widest mb-2">01 &bull; Diagnostic Territorial</h2>
+            <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Un besoin urgent d'infrastructures scolaires</h3>
+            <p class="text-slate-600 mt-4">Analyse de la zone d'étude à Ouidi et mise en évidence du déficit de bibliothèques sur le territoire burkinabè.</p>
+        </div>
+
+        <!-- Key Metrics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-slate-900 mb-2">99 Bibliothèques</h4>
+                <p class="text-sm font-semibold text-slate-500 mb-3">Sur l'ensemble du territoire burkinabè (dont 25 à Ouagadougou)</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Source : CENALAC et ONG FAVL. Un chiffre largement en deçà des besoins d'une capitale en pleine expansion démographique.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="scale" class="w-6 h-6"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-slate-900 mb-2">150 - 200</h4>
+                <p class="text-sm font-semibold text-slate-500 mb-3">Norme réglementaire IFLA / ENSSIB</p>
+                <p class="text-xs text-slate-500 leading-relaxed">Pour une population d'environ 3 millions d'habitants à Ouagadougou, l'écart d'équipement reste critique.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center mb-6">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                </div>
+                <h4 class="text-3xl font-bold text-slate-900 mb-2">Impact Direct</h4>
+                <p class="text-sm font-semibold text-slate-500 mb-3">Réforme Éducative de l'État</p>
+                <p class="text-xs text-slate-500 leading-relaxed">L'unification des programmes pédagogiques encourage la recherche personnelle. Les zones équipées développent une lecture régulière et autonome.</p>
+            </div>
+        </div>
+
+        <!-- Table of Schools -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-12">
+            <div class="px-8 py-6 bg-slate-900 text-white flex items-center justify-between">
+                <div>
+                    <h4 class="font-bold text-lg">Recensement des Établissements Scolaires de la Zone</h4>
+                    <p class="text-xs text-slate-400">12 établissements analysés autour du site d'implantation</p>
+                </div>
+                <span class="bg-brick text-white text-xs px-3 py-1 rounded-full font-medium">Zone d'étude Ouidi</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                            <th class="p-4">Établissement</th>
+                            <th class="p-4">Présence de Bibliothèque</th>
+                            <th class="p-4">État des lieux</th>
+                            <th class="p-4 text-right">Distance du Site</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 font-semibold text-slate-900">Collège Notre Dame de Kologh-Naba</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-semibold">Oui</span></td>
+                            <td class="p-4 text-slate-600">En bon état</td>
+                            <td class="p-4 text-right font-mono font-medium">1,2 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 font-semibold text-slate-900">Lycée privé John Kennedy</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-semibold">Espace de lecture</span></td>
+                            <td class="p-4 text-slate-600">Pas en très bon état</td>
+                            <td class="p-4 text-right font-mono font-medium">1,3 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 bg-red-50/30">
+                            <td class="p-4 font-semibold text-slate-900">École Sainte Thérèse de l'Enfant Jésus</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Non</span></td>
+                            <td class="p-4 text-slate-400">Néant</td>
+                            <td class="p-4 text-right font-mono font-medium">1,0 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 bg-red-50/30">
+                            <td class="p-4 font-semibold text-slate-900">École Naba Wagsé / École Quogodogo AB</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Non</span></td>
+                            <td class="p-4 text-slate-400">Néant</td>
+                            <td class="p-4 text-right font-mono font-medium">1,1 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 bg-red-50/30">
+                            <td class="p-4 font-semibold text-slate-900">École primaire Yénèga / Tous-petits B</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Non</span></td>
+                            <td class="p-4 text-slate-400">Néant</td>
+                            <td class="p-4 text-right font-mono font-medium">1,6 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 bg-red-50/30">
+                            <td class="p-4 font-semibold text-slate-900">École primaire mixte La Voie du Succès</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Non</span></td>
+                            <td class="p-4 text-slate-400">Néant</td>
+                            <td class="p-4 text-right font-mono font-medium">1,9 km</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 bg-red-50/30">
+                            <td class="p-4 font-semibold text-slate-900">École communale Ouidi & Autres (Nemmin, Communal)</td>
+                            <td class="p-4"><span class="px-2.5 py-1 bg-red-100 text-red-700 rounded-full text-xs font-semibold">Non</span></td>
+                            <td class="p-4 text-slate-400">Néant</td>
+                            <td class="p-4 text-right font-mono font-medium">2,0 à 3,1 km</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: DÉMARCHE CONCEPTUELLE & IMPLANTATION -->
+    <section id="demarche" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brick uppercase tracking-widest mb-2">02 &bull; Parti Architectural</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Implantation & Démarche Bioclimatique</h3>
+                <p class="text-slate-600 mt-4">Le projet s'insère à proximité immédiate du canal et du barrage N2, tirant parti du cadre naturel tout en se protégeant des contraintes thermiques du milieu tropical burkinabè.</p>
+            </div>
+
+            <!-- PLANS DISJOINTS : Plan de Situation & Plan de Masse -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                
+                <!-- 1. Plan de Situation -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b pb-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 font-mono">PN° 04</span>
+                                <h4 class="text-xl font-bold text-slate-900">Plan de Situation</h4>
+                            </div>
+                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">Document PDF</span>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            Insertion à l'échelle du quartier Ouidi, bordé par l'Avenue Yatenga, la Rue Nazi Boni et à proximité du Barrage N2.
+                        </p>
+
+                        <!-- PDF Viewer Container -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[300px] relative mb-4">
+                            <object data="images/plan-situation.pdf" type="application/pdf" class="w-full h-full">
+                                <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-3">
+                                    <i data-lucide="map" class="w-12 h-12 text-brick"></i>
+                                    <p class="text-sm font-semibold text-slate-800">Plan de Situation (PDF)</p>
+                                    <p class="text-xs text-slate-400">images/plan-situation.pdf</p>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                    <a href="images/plan-situation.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors w-full">
+                        <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                        <span>Ouvrir le Plan de Situation en HD (PDF)</span>
+                    </a>
+                </div>
+
+                <!-- 2. Plan de Masse -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b pb-4 mb-4">
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 font-mono">PN° 05</span>
+                                <h4 class="text-xl font-bold text-slate-900">Plan de Masse</h4>
+                            </div>
+                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">Document PDF</span>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            Implantation précise du bâtiment sur la parcelle, aménagement des accès, des parkings et de la voirie périphérique.
+                        </p>
+
+                        <!-- PDF Viewer Container -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[300px] relative mb-4">
+                            <object data="images/plan-masse.pdf" type="application/pdf" class="w-full h-full">
+                                <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-3">
+                                    <i data-lucide="layers" class="w-12 h-12 text-brick"></i>
+                                    <p class="text-sm font-semibold text-slate-800">Plan de Masse (PDF)</p>
+                                    <p class="text-xs text-slate-400">images/plan-masse.pdf</p>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                    <a href="images/plan-masse.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors w-full">
+                        <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                        <span>Ouvrir le Plan de Masse en HD (PDF)</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Démarche Conceptuelle & Zonage -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+                <!-- Démarche Conceptuelle PDF -->
+                <div class="lg:col-span-7 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b pb-4 mb-4">
+                            <h4 class="text-xl font-bold text-slate-900">Démarche Conceptuelle & Volumétrie</h4>
+                            <span class="text-xs font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">Document PDF</span>
+                        </div>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            Genèse de la forme, composition volumétrique et articulation fonctionnelle des espaces.
+                        </p>
+
+                        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[280px] relative mb-4">
+                            <object data="images/concept-volumetrie.pdf" type="application/pdf" class="w-full h-full">
+                                <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-3">
+                                    <i data-lucide="file-text" class="w-12 h-12 text-brick"></i>
+                                    <p class="text-sm font-semibold text-slate-800">Planche Démarche Conceptuelle (PDF)</p>
+                                    <p class="text-xs text-slate-400">images/concept-volumetrie.pdf</p>
+                                </div>
+                            </object>
+                        </div>
+                    </div>
+                    <a href="images/concept-volumetrie.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors w-full">
+                        <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                        <span>Ouvrir la Démarche Conceptuelle en HD (PDF)</span>
+                    </a>
+                </div>
+
+                <!-- Code Couleurs / Secteurs -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Zonage Fonctionnel</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                            Organisation spatiale sectorisée pour fluidifier les flux et offrir des ambiances sonores et thermiques adaptées à chaque type de public.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3 p-3 bg-amber-50 rounded-xl border border-amber-200">
+                                <div class="w-4 h-4 rounded bg-amber-500 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Espace Accueil & Services</p>
+                                    <p class="text-[11px] text-slate-500">Réception, orientation, inscriptions</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-red-50 rounded-xl border border-red-200">
+                                <div class="w-4 h-4 rounded bg-red-800 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Secteur Primaire (Éveil)</p>
+                                    <p class="text-[11px] text-slate-500">Lecture ludique, contes, informatique enfant</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-blue-50 rounded-xl border border-blue-200">
+                                <div class="w-4 h-4 rounded bg-blue-700 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Secteur Secondaire (Calme)</p>
+                                    <p class="text-[11px] text-slate-500">Fonds documentaire, étude, boxes de groupe</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3 p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+                                <div class="w-4 h-4 rounded bg-emerald-600 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-900">Ateliers & Numérique</p>
+                                    <p class="text-[11px] text-slate-500">Pratique artistique, postes informatiques</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Patios PDF -->
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5 space-y-4">
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Détail Technico-Végétal</span>
+                        <h4 class="text-2xl font-bold text-slate-900">Patios à Végétation Intégrée (Coupe 1/50)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Le bâtiment s'articules autour de patios cylindriques vitrés encastrés qui intègrent la végétation existante. Ce dispositif favorise l'éclairage naturel zénithal tout en apportant un rafraîchissement microclimatique passif.
+                        </p>
+                        <a href="images/coupe-patio.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors">
+                            <i data-lucide="external-link" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Ouvrir la Coupe Patio en HD (PDF)</span>
+                        </a>
+                    </div>
+                    
+                    <div class="md:col-span-7 bg-slate-50 rounded-xl border border-slate-200 overflow-hidden h-[300px]">
+                        <object data="images/coupe-patio.pdf" type="application/pdf" class="w-full h-full">
+                            <div class="p-8 text-center text-slate-400 h-full flex flex-col items-center justify-center">
+                                <i data-lucide="trees" class="w-10 h-10 mb-2 text-emerald-600"></i>
+                                <p class="text-xs font-medium text-slate-700">Coupe technique Patio (PDF)</p>
+                                <p class="text-[11px] text-slate-400 mt-1">images/coupe-patio.pdf</p>
+                            </div>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PLANS, COUPES ET FAÇADES ARCHITECTURALES (PDF) -->
+    <section id="coupes" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-bold text-brick uppercase tracking-widest mb-2">03 &bull; Dossier Graphique & Technique</h2>
+            <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Plans, Coupes & Façades (PDF)</h3>
+            <p class="text-slate-600 mt-4">Consultation directe des documents techniques officiels (Plans, Coupes et Façades).</p>
+        </div>
+
+        <!-- Plans 2D (RDC & Toiture) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Plan RDC -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-slate-400 font-mono">PN° 06</span>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">Échelle 1/250 &bull; PDF</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Plan du Rez-de-Chaussée</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Distribution générale, zones primaire et secondaire.</p>
+                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[280px] mb-4">
+                        <object data="images/plan-rdc.pdf" type="application/pdf" class="w-full h-full">
+                            <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-2">
+                                <i data-lucide="layout" class="w-10 h-10 text-slate-400"></i>
+                                <p class="text-xs font-semibold">Plan RDC (PDF)</p>
+                                <p class="text-xs text-slate-400">images/plan-rdc.pdf</p>
+                            </div>
+                        </object>
+                    </div>
+                </div>
+                <a href="images/plan-rdc.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors w-full">
+                    <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                    <span>Ouvrir le Plan RDC en HD (PDF)</span>
+                </a>
+            </div>
+
+            <!-- Plan de Toiture -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-slate-400 font-mono">PN° 08</span>
+                        <span class="text-xs font-semibold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">Échelle 1/200 &bull; PDF</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Plan de Toiture</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">Évacuation des eaux pluviales et retombées altimétriques.</p>
+                    <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[280px] mb-4">
+                        <object data="images/plan-toiture.pdf" type="application/pdf" class="w-full h-full">
+                            <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-2">
+                                <i data-lucide="file-text" class="w-10 h-10 text-brick"></i>
+                                <p class="text-xs font-semibold">Plan Toiture (PDF)</p>
+                                <p class="text-xs text-slate-400">images/plan-toiture.pdf</p>
+                            </div>
+                        </object>
+                    </div>
+                </div>
+                <a href="images/plan-toiture.pdf" target="_blank" class="inline-flex items-center justify-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors w-full">
+                    <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                    <span>Ouvrir le Plan Toiture en HD (PDF)</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- BLOC UNIQUE: COUPES ARCHITECTURALES EN UN SEUL PDF -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm mb-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-brick uppercase tracking-widest">Profils Altimétriques</span>
+                    <h4 class="text-2xl font-bold text-slate-900 mt-1">Coupes Architecturales (PDF Unique)</h4>
+                    <p class="text-xs text-slate-500">Document regroupant l'ensemble des coupes du projet (A-A, B-B et altimétrie)</p>
+                </div>
+                <a href="images/coupes.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors self-start md:self-auto">
+                    <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                    <span>Ouvrir les Coupes en HD (PDF)</span>
+                </a>
+            </div>
+
+            <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[400px]">
+                <object data="images/coupes.pdf" type="application/pdf" class="w-full h-full">
+                    <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-3">
+                        <i data-lucide="scissors" class="w-12 h-12 text-brick"></i>
+                        <p class="text-sm font-semibold text-slate-800">Document des Coupes Architecturales (PDF)</p>
+                        <p class="text-xs text-slate-400">Fichier : images/coupes.pdf</p>
+                    </div>
+                </object>
+            </div>
+        </div>
+
+        <!-- FAÇADES ARCHITECTURALES (PDF) -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-brick uppercase tracking-widest">Élévations Extérieures</span>
+                    <h4 class="text-2xl font-bold text-slate-900 mt-1">Façades du Projet (PDF)</h4>
+                    <p class="text-xs text-slate-500">Façades Principale, Postérieure et Latérales</p>
+                </div>
+                <a href="images/facades.pdf" target="_blank" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-4 py-2.5 rounded-lg font-semibold transition-colors self-start md:self-auto">
+                    <i data-lucide="external-link" class="w-4 h-4 text-brick"></i>
+                    <span>Ouvrir les Façades en HD (PDF)</span>
+                </a>
+            </div>
+
+            <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 h-[400px]">
+                <object data="images/facades.pdf" type="application/pdf" class="w-full h-full">
+                    <div class="p-8 text-center text-slate-500 h-full flex flex-col items-center justify-center space-y-3">
+                        <i data-lucide="building" class="w-12 h-12 text-brick"></i>
+                        <p class="text-sm font-semibold text-slate-800">Planche des Façades Architecturales (PDF)</p>
+                        <p class="text-xs text-slate-400">Fichier : images/facades.pdf</p>
+                    </div>
+                </object>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECTION 4: GALERIE DES ESPACES (PERSPECTIVES 3D - PHOTOS PNG) -->
+    <section id="espaces" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-400 uppercase tracking-widest mb-2">04 &bull; Vues 3D & Ambiances Intérieures</h2>
+                <h3 class="text-3xl font-extrabold sm:text-4xl">Galerie Complète des Espaces du Projet</h3>
+                <p class="text-slate-400 mt-4">Chaque zone du programme possède sa perspective 3D dédiée (Rendus en images PNG).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. Réception / Hall -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-reception.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'door-open\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Espace Accueil" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 11</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">1. Espace Accueil & Réception</h4>
+                            <p class="text-xs text-slate-400 mb-4">Comptoir circulaire en terre comprimée, orientation et vue directe sur le patio.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Accueil / Orientation</span>
+                    </div>
+                </div>
+
+                <!-- 2. Lecture Ludique (Primaire) -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-primaire.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'book\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Zone Lecture Ludique" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 12</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">2. Zone Lecture Ludique (Primaire)</h4>
+                            <p class="text-xs text-slate-400 mb-4">Rayonnages bas, mobilier souple et assises adaptées aux enfants (6-11 ans).</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Primaire / Éveil</span>
+                    </div>
+                </div>
+
+                <!-- 3. Atelier Créatif -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-atelier.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'palette\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Atelier Créatif" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 13</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">3. Atelier Créatif & Expression</h4>
+                            <p class="text-xs text-slate-400 mb-4">Espace de manipulation manuelle et plastique avec cloisons transparentes.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Pratique Artistique</span>
+                    </div>
+                </div>
+
+                <!-- 4. Numérique Enfant -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-numerique-enfant.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'laptop\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Espace Numérique Enfant" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 14</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">4. Espace Numérique Enfant</h4>
+                            <p class="text-xs text-slate-400 mb-4">Initiation informatique et consultation sur postes adaptés aux élèves du primaire.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Primaire / IT</span>
+                    </div>
+                </div>
+
+                <!-- 5. Coin Conte Extérieur -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-conte.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'sparkles\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Coin Conte Extérieur" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 15</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">5. Coin Conte Extérieur</h4>
+                            <p class="text-xs text-slate-400 mb-4">Amphithéâtre gradiné sous ombrage pour la tradition orale et la lecture publique.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Oralité / Extérieur</span>
+                    </div>
+                </div>
+
+                <!-- 6. Lecture Secondaire (Calme) -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-secondaire-lecture.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'book-open\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Espace Lecture Secondaire" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 16</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">6. Espace Lecture Simple (Secondaire)</h4>
+                            <p class="text-xs text-slate-400 mb-4">Zone d'étude individuelle et silencieuse favorisant la concentration des ados.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Secondaire / Calme</span>
+                    </div>
+                </div>
+
+                <!-- 7. Salles de Travail en Groupe -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
+                    <div class="h-52 relative bg-slate-700">
+                        <img src="images/3d-secondaire-groupe.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-52 flex items-center justify-center text-slate-400\'><i data-lucide=\'users\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Salles de Travail en Groupe" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 17</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-1">7. Salles de Travail en Groupe</h4>
+                            <p class="text-xs text-slate-400 mb-4">Boxes vitrés et insonorisés pour le travail collaboratif et les projets à plusieurs.</p>
+                        </div>
+                        <span class="inline-block text-xs font-semibold text-amber-400 uppercase tracking-wider">Secondaire / Groupe</span>
+                    </div>
+                </div>
+
+                <!-- 8. ESPACE NUMÉRIQUE & RAYONNAGES SECONDAIRE -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-amber-500/40 lg:col-span-2 flex flex-col md:flex-row">
+                    <div class="md:w-1/2 h-64 md:h-auto relative bg-slate-700">
+                        <img src="images/3d-secondaire-numerique.png" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'h-full min-h-[220px] flex items-center justify-center text-slate-400\'><i data-lucide=\'monitor\' class=\'w-12 h-12 text-amber-400 opacity-60\'></i></div>';" alt="Espace Numérique et Rayonnages" class="w-full h-full object-cover">
+                        <span class="absolute bottom-3 left-3 bg-slate-900/80 px-2.5 py-1 rounded text-[11px] font-mono text-white">PN° 18 & 19</span>
+                    </div>
+                    <div class="p-6 md:w-1/2 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="inline-block bg-amber-500/20 text-amber-300 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3 border border-amber-500/30">
+                                Zone Mixte Recherche & Fonds
+                            </div>
+                            <h4 class="text-xl font-bold text-white mb-2">8. Espace Numérique & Rayonnages Principaux</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                                Zone intégrée combinant le pôle de recherche informatique avancée pour les collégiens/lycéens et les allées de stockage du fonds documentaire (livres, encyclopédies et ouvrages de référence).
+                            </p>
+                        </div>
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">Secondaire / IT & Fonds Documentaire</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="font-bold text-slate-200 text-sm">Projet d'Architecture : Bibliothèque Scolaire Mutualisée à Ouidi</p>
+                <p class="mt-1">Auteur : BELEMSIGRI Ian Claude Kayaba &bull; Encadrants : M. Yves YOBO, Architecte ; M. DA Lamine, Architecte</p>
+            </div>
+            <p>&copy; 2026 Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
